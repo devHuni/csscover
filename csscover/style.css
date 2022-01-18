@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%; /* here */
+}
+
+header p {
+    font-size: 50px;
+    font-weight: 900;
+    color: white;
+}
+
+header ul {
+    list-style: none;
+    padding-right: 20px; /* here */
+}
+
+/* a 태그만 할 것! */
+header a {
+    margin-bottom: 5px;
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    float: left;
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* padding 쓰지 말 것 */
+header a:last-of-type {
+    margin-right: 10px;
+}
+
+/* :not(:) remember */
+header a:hover:not(:first-child) {
+    border-bottom: 4px solid rgb(158, 158, 0);
+    color: rgb(158, 158, 0);
+}
+
+section {
+    background-color: rgb(231, 231, 231);
+    text-align: center;
+    padding: 100px 100px 0 100px;
+}
+
+.title {
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.contents {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.first, .second, .third, .fourth {
+    padding-bottom: 150px;
+}
+
+button {
+    background-color: yellow;
+    color: black;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: 17px;
+    font-weight: 600;
+    box-shadow: 2px 2px black;
+    transition-duration: 0.3s;
+}
+
+button:hover {
+    background-color: rgb(175, 175, 0);
+    cursor: pointer;
+}
+
+/* remember */
+button:active {
+    background-color: black;
+    color: yellow;
+    box-shadow: 4px 4px yellow;
+}
+
+footer {
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 40px;
+    color: white;
+}
+
+footer p {
+    font-weight: 600;
+}
+
+footer a {
+    text-decoration: none;
+    color:rgb(172, 0, 172);
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    header a {
+        padding-top: 20px;
+    }
+
+    .title {
+        font-size: 30px;
+        font-weight: 800;
+        margin-bottom: 30px;
+    }
+
+    .contents {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 60px;
+        text-align: justify;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
